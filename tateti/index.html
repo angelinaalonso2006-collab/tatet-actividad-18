@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tateti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Tateti</h1>
+
+    <div class="marcador">
+      <div class="puntaje jugador-x">X: <span id="puntos-x">0</span></div>
+      <div class="puntaje empates">Empates: <span id="puntos-empate">0</span></div>
+      <div class="puntaje jugador-o">O: <span id="puntos-o">0</span></div>
+    </div>
+
+    <p id="estado" class="estado">Turno de X</p>
+
+    <div id="tablero" class="tablero">
+      <button class="celda" data-indice="0" aria-label="Casilla 1"></button>
+      <button class="celda" data-indice="1" aria-label="Casilla 2"></button>
+      <button class="celda" data-indice="2" aria-label="Casilla 3"></button>
+      <button class="celda" data-indice="3" aria-label="Casilla 4"></button>
+      <button class="celda" data-indice="4" aria-label="Casilla 5"></button>
+      <button class="celda" data-indice="5" aria-label="Casilla 6"></button>
+      <button class="celda" data-indice="6" aria-label="Casilla 7"></button>
+      <button class="celda" data-indice="7" aria-label="Casilla 8"></button>
+      <button class="celda" data-indice="8" aria-label="Casilla 9"></button>
+    </div>
+
+    <div class="botones">
+      <button id="btn-reiniciar" class="btn">Nueva partida</button>
+      <button id="btn-reset-marcador" class="btn btn-secundario">Reiniciar marcador</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

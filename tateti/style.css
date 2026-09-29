@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  color: #f1f1f1;
+  padding: 16px;
+}
+
+.contenedor {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.marcador {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.puntaje {
+  flex: 1;
+  background: #3a3a55;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.jugador-x { color: #ff6b6b; }
+.jugador-o { color: #4ecdc4; }
+.empates   { color: #ccc; }
+
+.estado {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  min-height: 1.6em;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 20px;
+}
+
+.celda {
+  background: #3a3a55;
+  border: none;
+  border-radius: 10px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f1f1f1;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.celda:hover:not(:disabled) {
+  background: #4a4a6a;
+}
+
+.celda:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.celda:disabled {
+  cursor: default;
+}
+
+.celda.x { color: #ff6b6b; }
+.celda.o { color: #4ecdc4; }
+
+.celda.ganadora {
+  background: #f9d56e;
+  color: #1e1e2f;
+  animation: latido 0.6s ease-in-out 2;
+}
+
+@keyframes latido {
+  50% { transform: scale(1.08); }
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #4ecdc4;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-secundario {
+  background: #ff6b6b;
+}
